@@ -99,6 +99,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./reset-password/reset-password.component */ "xT/v");
 /* harmony import */ var _angular_material_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../angular-material.module */ "rhD1");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./auth.service */ "qXBG");
+/* harmony import */ var _svgicon_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../svgicon.module */ "IzeU");
+/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @auth0/angular-jwt */ "Nm8O");
+
+
+
+
 
 
 
@@ -114,16 +121,21 @@ __webpack_require__.r(__webpack_exports__);
 class AuthModule {
 }
 AuthModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AuthModule });
-AuthModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AuthModule_Factory(t) { return new (t || AuthModule)(); }, imports: [[
+AuthModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AuthModule_Factory(t) { return new (t || AuthModule)(); }, providers: [
+        _auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"]
+    ], imports: [[
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
             _auth_routing_module__WEBPACK_IMPORTED_MODULE_2__["AuthRoutingModule"],
             _angular_material_module__WEBPACK_IMPORTED_MODULE_9__["AngularMaterialModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+            _svgicon_module__WEBPACK_IMPORTED_MODULE_12__["SvgIconModule"],
+            _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_13__["JwtModule"].forRoot({})
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AuthModule, { declarations: [_auth_component__WEBPACK_IMPORTED_MODULE_3__["AuthComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"], _logout_logout_component__WEBPACK_IMPORTED_MODULE_5__["LogoutComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"], _request_password_request_password_component__WEBPACK_IMPORTED_MODULE_7__["RequestPasswordComponent"], _reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_8__["ResetPasswordComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _auth_routing_module__WEBPACK_IMPORTED_MODULE_2__["AuthRoutingModule"],
         _angular_material_module__WEBPACK_IMPORTED_MODULE_9__["AngularMaterialModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+        _svgicon_module__WEBPACK_IMPORTED_MODULE_12__["SvgIconModule"], _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_13__["JwtModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AuthModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -132,7 +144,12 @@ AuthModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjecto
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                     _auth_routing_module__WEBPACK_IMPORTED_MODULE_2__["AuthRoutingModule"],
                     _angular_material_module__WEBPACK_IMPORTED_MODULE_9__["AngularMaterialModule"],
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+                    _svgicon_module__WEBPACK_IMPORTED_MODULE_12__["SvgIconModule"],
+                    _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_13__["JwtModule"].forRoot({})
+                ],
+                providers: [
+                    _auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"]
                 ]
             }]
     }], null, null); })();

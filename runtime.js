@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"default~auth-auth-module~dashboard-dashboard-module":"default~auth-auth-module~dashboard-dashboard-module","auth-auth-module":"auth-auth-module","dashboard-dashboard-module":"dashboard-dashboard-module","annonces-annonces-module":"annonces-annonces-module"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"auth-auth-module":"auth-auth-module","dashboard-dashboard-module":"dashboard-dashboard-module","annonces-annonces-module":"annonces-annonces-module"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
